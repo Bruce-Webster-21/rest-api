@@ -14,6 +14,10 @@ app.use(
 );
 app.use(compression());
 app.use(cookieParser());
-app.use(bodyParser().json);
+app.use(bodyParser.json());
 
 const server = http.createServer(app);
+
+server.listen(8080, () => {
+  console.log("Server is running on http://localhost:8080/");
+});
